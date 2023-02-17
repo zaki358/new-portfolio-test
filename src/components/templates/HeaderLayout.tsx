@@ -1,15 +1,11 @@
-import React, { FC, memo, ReactNode } from "react";
+import { FC, memo, } from "react";
 import { Header } from "../organisms/layout/Header";
 
-type Props = {
-  children: ReactNode;
-};
 
-export const HeaderLayout: FC<Props> = memo(({ children }) => {
+export const HeaderLayout: FC= memo(() => {
   return (
     <>
       <Header />
-      {children}
     </>
   );
 });

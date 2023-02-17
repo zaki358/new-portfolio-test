@@ -11,32 +11,11 @@ import { HeaderLayout } from "../components/templates/HeaderLayout";
 export const Router: FC = memo(() => {
   return (
     <Routes>
-      <Route
-        path="/"
-        element={
-          <HeaderLayout>
-            <Home />
-          </HeaderLayout>
-        }
-      />
-      <Route path="/self" element={<Self />} />
-      <Route path="/skill" element={<Skill />} />
-      <Route
-        path="/achievement"
-        element={
-          <HeaderLayout>
-            <Achievement />
-          </HeaderLayout>
-        }
-      />
-      <Route
-        path="/contact"
-        element={
-          <HeaderLayout>
-            <Contact />
-          </HeaderLayout>
-        }
-      />
+      <Route path="/" element={<HeaderLayout />}>
+        <Route index element={<Home />} />
+        <Route path="/achievement" element={<Achievement />} />
+        <Route path="/contact" element={<Contact /> }/>
+      </Route>
     </Routes>
   );
 });
