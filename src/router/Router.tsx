@@ -2,9 +2,9 @@ import { FC, memo } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import { Home } from "../components/pages/Home";
-import { Self } from "../components/pages/Self";
+import { Introduction } from "../components/pages/Introduction";
 import { Skill } from "../components/pages/Skill";
-import { Achievement } from "../components/pages/Achievement";
+import { Achievements } from "../components/pages/Achievements";
 import { Contact } from "../components/pages/Contact";
 import { HeaderLayout } from "../components/templates/HeaderLayout";
 
@@ -13,7 +13,7 @@ export const Router: FC = memo(() => {
     <Routes>
       <Route path="/" element={<HeaderLayout />}>
         <Route index element={<Home />} />
-        <Route path="/achievement" element={<Achievement />} />
+        <Route path="/achievement" element={<Achievements />} />
         <Route path="/contact" element={<Contact /> }/>
       </Route>
     </Routes>
